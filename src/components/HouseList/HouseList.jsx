@@ -1,4 +1,4 @@
-import houses from "../../data/housesData";
+import houses from "../../data/houseData";
 import HouseCard from "../HouseCard/HouseCard";
 import styles from "./HouseList.module.css";
 
