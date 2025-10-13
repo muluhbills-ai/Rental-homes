@@ -1,0 +1,20 @@
+.contactPage {
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.contactPage h1 {
+  color: #2e8b57;
+  margin-bottom: 0.5rem;
+}
+
+.contactPage p {
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

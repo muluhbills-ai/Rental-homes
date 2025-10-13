@@ -1,0 +1,19 @@
+.home {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.listingsSection {
+  padding: 2rem;
+  text-align: center;
+}
+
+.listingsSection h2 {
+  color: #2e8b57;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,34 @@
+.notFound {
+  text-align: center;
+  padding: 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.notFound h1 {
+  font-size: 5rem;
+  color: #2e8b57;
+}
+
+.notFound p {
+  color: #555;
+  margin: 1rem 0;
+}
+
+.notFound a {
+  color: white;
+  background: #2e8b57;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.notFound a:hover {
+  background: #256d47;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
