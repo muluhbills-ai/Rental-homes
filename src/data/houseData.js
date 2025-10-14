@@ -1,5 +1,7 @@
 /**
  * Mock data for house rentals
+ * Images are stored in public/assets/images/
+ * This way, we can reference them directly as strings
  */
 
 const houses = [
@@ -8,7 +10,10 @@ const houses = [
     title: "Modern Apartment in City Center",
     location: "New York, NY",
     price: 2500,
-    image: "/assets/images/house1.jpg",
+    images: [
+      "/assets/images/1.jpg",
+      "/assets/images/4.jpg"
+    ],
     description:
       "A beautiful modern apartment located in the heart of New York City. Spacious living area, fully furnished, close to amenities."
   },
@@ -17,7 +22,7 @@ const houses = [
     title: "Cozy Cottage Near the Lake",
     location: "Lake Tahoe, CA",
     price: 1800,
-    image: "/assets/images/house2.jpg",
+    images: ["/assets/images/2.jpg"],
     description:
       "Enjoy peace and nature in this cozy lakefront cottage. Perfect for a small family or couple, with breathtaking views."
   },
@@ -26,7 +31,7 @@ const houses = [
     title: "Luxury Villa with Private Pool",
     location: "Miami, FL",
     price: 5200,
-    image: "/assets/images/house3.jpg",
+    images: ["/assets/images/3.jpg"],
     description:
       "Spacious luxury villa with private pool and garden. Ideal for those who want comfort and style with privacy."
   },
@@ -35,7 +40,7 @@ const houses = [
     title: "Charming Townhouse",
     location: "Austin, TX",
     price: 2200,
-    image: "/assets/images/house4.jpg",
+    images: ["/assets/images/4.jpg"],
     description:
       "This charming townhouse offers a cozy living space, modern kitchen, and is close to downtown Austin."
   },
@@ -44,9 +49,30 @@ const houses = [
     title: "Beachfront Condo",
     location: "Santa Monica, CA",
     price: 3500,
-    image: "/assets/images/house5.jpg",
+    images: ["/assets/images/4.jpg"],
     description:
       "Wake up to ocean views every day in this beachfront condo. Modern interior, steps from the beach."
+  },
+  {
+    id: 6,
+    title: "Coastal Condo",
+    location: "Santa Monica, CA",
+    price: 3500,
+    images: ["/assets/images/5.jpg"],
+    description:
+      "Wake up to ocean views every day in this beachfront condo. Modern interior, steps from the beach."
+  },
+  {
+    id: 7,
+    title: "Modern Family Home",
+    location: "Douala, Cameroon",
+    price: 250000,
+    images: [
+      "/assets/images/6.jpg",
+      "/assets/images/7.jpg",
+      "/assets/images/8.jpg"
+    ],
+    description: "Spacious 4-bedroom home with a beautiful garden."
   }
 ];
 

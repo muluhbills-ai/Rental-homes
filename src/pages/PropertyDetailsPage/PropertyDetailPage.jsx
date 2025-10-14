@@ -11,12 +11,25 @@ function PropertyDetailPage() {
 
   return (
     <div className={styles.container}>
-      <img src={house.image} alt={house.title} className={styles.image} />
+      {/* Main image */}
+      <img
+        src={house.images[0]}
+        alt={house.title}
+        className={styles.mainImage}
+      />
+
       <div className={styles.details}>
         <h1>{house.title}</h1>
         <p className={styles.location}>{house.location}</p>
         <p className={styles.price}>${house.price.toLocaleString()}</p>
         <p className={styles.description}>{house.description}</p>
+      </div>
+
+      {/* Gallery section */}
+      <div className={styles.gallery}>
+        {house.images.map((img, index) => (
+          <img key={index} src={img} alt={`${house.title}-${index}`} />
+        ))}
       </div>
     </div>
   );
