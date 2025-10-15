@@ -1,0 +1,118 @@
+.reviewContainer {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reviewContainer h2 {
+  color: #2e8b57;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Form Styling ===== */
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reviewForm input,
+.reviewForm textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviewForm input:focus,
+.reviewForm textarea:focus {
+  outline: none;
+  border-color: #2e8b57;
+  box-shadow: 0 0 6px rgba(46, 139, 87, 0.3);
+}
+
+.reviewForm button {
+  background: #2e8b57;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.reviewForm button:hover {
+  background: #256d47;
+  transform: translateY(-2px);
+}
+
+/* ===== Review List ===== */
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reviewCard {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.reviewMessage {
+  color: #333;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.reviewMeta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Delete Button ===== */
+.deleteButton {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #b02a37;
+  transform: scale(1.05);
+}
+
+.noReviews {
+  text-align: center;
+  color: #777;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .reviewContainer {
+    padding: 1.5rem;
+  }
+
+  .reviewForm input,
+  .reviewForm textarea {
+    font-size: 0.95rem;
+  }
+
+  .reviewForm button {
+    font-size: 0.95rem;
+  }
+}

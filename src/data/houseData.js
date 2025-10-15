@@ -24,7 +24,10 @@ const houses = [
     title: "Cozy Cottage Near the Lake",
     location: "Lake Tahoe, CA",
     price: 1800,
-    images: ["/assets/videos/vid-1.mp4"],
+    images: ["/assets/images/10.jpg",
+      "/assets/videos/vid-1.mp4",
+      "/assets/images/9.jpg"
+    ],
     description:
       "Enjoy peace and nature in this cozy lakefront cottage. Perfect for a small family or couple, with breathtaking views."
   },
