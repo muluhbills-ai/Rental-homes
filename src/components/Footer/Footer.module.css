@@ -1,7 +1,27 @@
+/* Full-width responsive footer */
 .footer {
   background-color: #2e8b57;
   color: white;
   text-align: center;
   padding: 1.2rem;
   font-size: 0.9rem;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Improve typography and spacing on larger screens */
+@media (min-width: 768px) {
+  .footer {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Make footer text smaller and tighter on mobile */
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
 }

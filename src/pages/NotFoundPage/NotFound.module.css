@@ -1,34 +1,118 @@
+/* =========================
+   ✅ Not Found Page Container
+========================= */
 .notFound {
+  width: 100%;
+  max-width: 1200px; /* Keeps content readable on large screens */
+  margin: 0 auto;
+  padding: 3rem 1rem; /* Horizontal padding for small screens */
   text-align: center;
-  padding: 3rem;
   animation: fadeIn 0.5s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+/* =========================
+   ✅ Heading
+========================= */
 .notFound h1 {
   font-size: 5rem;
   color: #2e8b57;
+  margin: 0.5rem 0;
+  font-weight: 700;
 }
 
+/* =========================
+   ✅ Paragraph
+========================= */
 .notFound p {
   color: #555;
   margin: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
+/* =========================
+   ✅ Back/Home Link
+========================= */
 .notFound a {
   color: white;
   background: #2e8b57;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
 }
 
 .notFound a:hover {
   background: #256d47;
   transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(46, 139, 87, 0.4);
 }
 
+/* =========================
+   ✅ Fade-in Animation
+========================= */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   ✅ Tablet Responsiveness
+========================= */
+@media (max-width: 768px) {
+  .notFound {
+    padding: 2rem 1rem;
+  }
+
+  .notFound h1 {
+    font-size: 3.5rem;
+  }
+
+  .notFound p {
+    font-size: 1.05rem;
+  }
+
+  .notFound a {
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* =========================
+   ✅ Mobile Responsiveness
+========================= */
+@media (max-width: 480px) {
+  .notFound {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .notFound h1 {
+    font-size: 2.5rem;
+  }
+
+  .notFound p {
+    font-size: 0.95rem;
+  }
+
+  .notFound a {
+    padding: 0.6rem 1rem;
+  }
 }

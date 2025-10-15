@@ -4,7 +4,9 @@ function HeroSection() {
   return (
     <section className={styles.hero}>
       <div className={styles.overlay}>
-        <h1 className={styles.title}>Find Your Dream Home with RentEasy</h1>
+        <h1 className={styles.title}>
+          Find Your Dream Home in Bambilli with RentEasy
+        </h1>
         <p className={styles.subtitle}>
           Explore the best rental listings in your city — comfort, style, and affordability.
         </p>

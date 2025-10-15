@@ -1,23 +1,67 @@
+/* ✅ About Section (Full-width & Responsive) */
 .about {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  width: 100%;
+  max-width: 1200px; /* Gives a nice readable width on large screens */
+  margin: 0 auto;
+  padding: 2rem 1rem; /* Adds balanced horizontal padding */
   line-height: 1.7;
   animation: fadeUp 0.6s ease;
+  box-sizing: border-box;
 }
 
+/* ✅ Title Styling */
 .about h1 {
   text-align: center;
   color: #2e8b57;
   margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
+/* ✅ Paragraph Styling */
 .about p {
   color: #333;
   margin-bottom: 1rem;
+  font-size: 1.05rem;
+  text-align: justify;
 }
 
+/* ✅ Entrance Animation */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 1.5rem 1rem;
+  }
+
+  .about h1 {
+    font-size: 1.6rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem 0.8rem;
+  }
+
+  .about h1 {
+    font-size: 1.4rem;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+  }
 }

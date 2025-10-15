@@ -1,24 +1,15 @@
-import { useState } from "react";
 import styles from "./SearchBar.module.css";
 
-function SearchBar({ onSearch }) {
-  const [query, setQuery] = useState("");
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    onSearch(query);
-  };
-
+function SearchBar({ query, setQuery }) {
   return (
-    <form className={styles.searchBar} onSubmit={handleSearch}>
+    <div className={styles.searchBar}>
       <input
         type="text"
         placeholder="Search by location or property name..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button type="submit">Search</button>
-    </form>
+    </div>
   );
 }
 

@@ -1,19 +1,154 @@
-.app {
-  display: flex;
-  flex-direction: column;
+/* =========================
+   ✅ Root & Global Styles
+========================= */
+:root {
+  font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #213547;
+  background-color: #ffffff;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   ✅ Layout Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ✅ Full-width & Full-height
+========================= */
+html, body {
+  width: 100%;
   min-height: 100vh;
-  background-color: #fafafa;
-  color: #333;
-  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background: #fff;
 }
 
-.main {
-  flex: 1;
-  padding: 2rem;
-  animation: fadeIn 0.6s ease-in-out;
+/* =========================
+   ✅ Universal Page Container
+========================= */
+.container {
+  width: 100%;
+  max-width: 1400px; /* Prevents overly wide content on large screens */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* =========================
+   ✅ Headings
+========================= */
+h1, h2, h3, h4 {
+  color: #2e8b57;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+/* =========================
+   ✅ Buttons (Unified Style)
+========================= */
+button {
+  background-color: #2e8b57;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
+}
+
+button:hover {
+  background-color: #256d47;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(46, 139, 87, 0.4);
+}
+
+/* =========================
+   ✅ Links
+========================= */
+a {
+  text-decoration: none;
+  color: #2e8b57;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1e6b45;
+}
+
+/* =========================
+   ✅ Images & Media
+========================= */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* =========================
+   ✅ Responsive Text & Layout
+========================= */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
 }

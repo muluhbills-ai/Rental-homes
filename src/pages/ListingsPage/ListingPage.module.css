@@ -1,15 +1,51 @@
+/* ✅ Main Page Container */
 .page {
-  padding: 2rem;
+  width: 100%;
+  max-width: 1200px; /* Keeps content readable on large screens */
+  margin: 0 auto;
+  padding: 2rem 1rem; /* Horizontal padding for smaller screens */
   animation: fadeUp 0.6s ease;
+  box-sizing: border-box;
 }
 
+/* ✅ Page Heading */
 .page h1 {
   color: #2e8b57;
   text-align: center;
   margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
+/* ✅ Fade-up Animation */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Tablet Responsiveness */
+@media (max-width: 768px) {
+  .page {
+    padding: 1.5rem 1rem;
+  }
+
+  .page h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 480px) {
+  .page {
+    padding: 1rem 0.8rem;
+  }
+
+  .page h1 {
+    font-size: 1.4rem;
+  }
 }

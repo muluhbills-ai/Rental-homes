@@ -1,26 +1,57 @@
+/* =========================
+   ✅ Pagination Container
+========================= */
 .pagination {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Wrap buttons on small screens */
   gap: 0.5rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* =========================
+   ✅ Pagination Buttons
+========================= */
 .pageButton {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border: 1px solid #2e8b57;
   background: white;
   color: #2e8b57;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease, transform 0.2s ease;
+  min-width: 45px;
+  text-align: center;
 }
 
 .pageButton:hover {
   background: #2e8b57;
   color: white;
+  transform: translateY(-2px);
 }
 
 .active {
   background: #2e8b57;
   color: white;
+}
+
+/* =========================
+   ✅ Responsive Adjustments
+========================= */
+@media (max-width: 768px) {
+  .pageButton {
+    padding: 0.5rem 0.9rem;
+    min-width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageButton {
+    padding: 0.45rem 0.8rem;
+    min-width: 35px;
+    font-size: 0.85rem;
+  }
 }

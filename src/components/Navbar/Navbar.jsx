@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}> RentEasy</div>
+      <div className={styles.logo}> RentEasy🏠</div>
       <ul className={styles.links}>
         {["/", "/listings", "/about", "/contact"].map((path, idx) => {
           const labels = ["Home", "Listings", "About", "Contact"];

@@ -11,8 +11,10 @@ const houses = [
     location: "New York, NY",
     price: 2500,
     images: [
-      "/assets/images/1.jpg",
-      "/assets/images/4.jpg"
+      "/assets/images/livingroom-A1.jpg",
+      "/assets/images/kitchen-A2.jpg",
+      "/assets/images/kitchen-A1.jpg",
+      "/assets/images/main-section.webp"
     ],
     description:
       "A beautiful modern apartment located in the heart of New York City. Spacious living area, fully furnished, close to amenities."
@@ -22,9 +24,20 @@ const houses = [
     title: "Cozy Cottage Near the Lake",
     location: "Lake Tahoe, CA",
     price: 1800,
-    images: ["/assets/images/2.jpg"],
+    images: ["/assets/videos/vid-1.mp4"],
     description:
       "Enjoy peace and nature in this cozy lakefront cottage. Perfect for a small family or couple, with breathtaking views."
+  },
+ {
+    id: 8,
+    title: "Cozy Cottage Near the Lake",
+    location: "Lake Tahoe, CA",
+    price: 1800,
+    images: [
+      "/assets/images/2.jpg",
+      "/assets/images/3.jpg"
+    ],
+    description: "Enjoy peace and nature..."
   },
   {
     id: 3,

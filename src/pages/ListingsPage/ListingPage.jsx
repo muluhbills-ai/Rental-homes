@@ -1,24 +1,31 @@
 import { useState } from "react";
 import HouseList from "../../components/HouseList/HouseList";
-import SearchBar from "../../components/SearchBar/SearchBar";
 import FilterPanel from "../../components/FilterPanel/FilterPanel";
-import Pagination from "../../components/Pagination/Pagination";
+import housesData from "../../data/houseData";
 import styles from "./ListingPage.module.css";
 
 function ListingsPage() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 5;
+  const [houses] = useState(housesData);
+
+  // Filters state
+  const [filters, setFilters] = useState({ location: "", maxPrice: "" });
+
+  // Optional search on this page
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <div className={styles.page}>
-      <h1>Available Rentals</h1>
-      <SearchBar onSearch={(q) => console.log("Searching for:", q)} />
-      <FilterPanel />
-      <HouseList />
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
+      <h1>All Listings</h1>
+
+      {/* Filter Panel */}
+      <FilterPanel onFilter={setFilters} />
+
+      {/* Optional search bar */}
+      <HouseList
+        houses={houses}
+        searchQuery={searchQuery}
+        filters={filters}
+        setFilters={setFilters}
       />
     </div>
   );
