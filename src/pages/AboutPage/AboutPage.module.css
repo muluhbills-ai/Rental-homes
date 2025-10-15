@@ -1,67 +1,90 @@
-/* ✅ About Section (Full-width & Responsive) */
-.about {
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: #fdfdfd;
+}
+
+/* ====== About Section ====== */
+.aboutContent {
   width: 100%;
-  max-width: 1200px; /* Gives a nice readable width on large screens */
-  margin: 0 auto;
-  padding: 2rem 1rem; /* Adds balanced horizontal padding */
-  line-height: 1.7;
-  animation: fadeUp 0.6s ease;
-  box-sizing: border-box;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.8) 30%,
+      rgba(255, 255, 255, 0.6) 60%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    url("../../../public/assets/images/herosection-bg.jpg"); /* your local image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  position: relative;
+  overflow: hidden;
 }
 
-/* ✅ Title Styling */
-.about h1 {
+.overlay {
   text-align: center;
-  color: #2e8b57;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  color: #222;
+  max-width: 800px;
+  padding: 40px 20px;
 }
 
-/* ✅ Paragraph Styling */
-.about p {
+/* ====== Title ====== */
+.aboutContent h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ====== Paragraphs ====== */
+.aboutContent p {
+  font-size: 1.2rem;
+  line-height: 1.8;
   color: #333;
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-  text-align: justify;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-/* ✅ Entrance Animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.aboutContent p:hover {
+  color: #0a6835;
+  text-decoration: underline;
 }
 
-/* ✅ Responsive Design */
-@media (max-width: 768px) {
-  .about {
-    padding: 1.5rem 1rem;
-  }
-
-  .about h1 {
-    font-size: 1.6rem;
-  }
-
-  .about p {
-    font-size: 1rem;
-  }
+.aboutContent p.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@media (max-width: 480px) {
-  .about {
-    padding: 1rem 0.8rem;
-  }
+/* ====== Reviews Section ====== */
+.reviewsSection {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto 30px;
+  padding: 30px 20px;
+}
 
-  .about h1 {
-    font-size: 1.4rem;
-  }
+/* ====== Footer ====== */
+.footer {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  padding-bottom: 30px;
+}
 
-  .about p {
-    font-size: 0.95rem;
-  }
+.footerNote {
+  margin-top: 8px;
+  font-style: italic;
+  color: #999;
 }

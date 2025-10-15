@@ -13,16 +13,22 @@ function ReviewForm() {
     message: "",
   });
 
-  // Save to localStorage on change
+  const [userEmail, setUserEmail] = useState("");
+
   useEffect(() => {
     localStorage.setItem("reviews", JSON.stringify(reviews));
   }, [reviews]);
+
+  useEffect(() => {
+    const storedEmail = localStorage.getItem("userEmail");
+    if (storedEmail) setUserEmail(storedEmail);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
@@ -36,37 +42,73 @@ function ReviewForm() {
       email: formData.email,
       message: formData.message,
       date: new Date().toLocaleString(),
+      likes: 0,
+      dislikes: 0,
+      userAction: null,
     };
 
     setReviews([newReview, ...reviews]);
-    setFormData({ name: "", email: "", message: "" });
+    localStorage.setItem("userEmail", formData.email);
+    setUserEmail(formData.email);
 
-    // 🚀 Email trigger
-    try {
-      await fetch("https://formsubmit.co/ajax/pennjude31@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          subject: "📝 New DreamRent Review",
-          name: newReview.name,
-          email: newReview.email,
-          message: newReview.message,
-        }),
-      });
-      alert("Review submitted successfully!");
-    } catch (error) {
-      console.error("Email failed:", error);
-    }
+    setFormData({ name: "", email: "", message: "" });
+  };
+
+  const handleLike = (id) => {
+    setReviews((prev) =>
+      prev.map((review) => {
+        if (review.id !== id) return review;
+
+        if (review.userAction === "like") {
+          // Toggle off like
+          return { ...review, likes: review.likes - 1, userAction: null };
+        } else if (review.userAction === "dislike") {
+          // Switch from dislike to like
+          return {
+            ...review,
+            dislikes: review.dislikes - 1,
+            likes: review.likes + 1,
+            userAction: "like",
+          };
+        } else {
+          // Normal like
+          return { ...review, likes: review.likes + 1, userAction: "like" };
+        }
+      })
+    );
+  };
+
+  const handleDislike = (id) => {
+    setReviews((prev) =>
+      prev.map((review) => {
+        if (review.id !== id) return review;
+
+        if (review.userAction === "dislike") {
+          // Toggle off dislike
+          return { ...review, dislikes: review.dislikes - 1, userAction: null };
+        } else if (review.userAction === "like") {
+          // Switch from like to dislike
+          return {
+            ...review,
+            likes: review.likes - 1,
+            dislikes: review.dislikes + 1,
+            userAction: "dislike",
+          };
+        } else {
+          // Normal dislike
+          return { ...review, dislikes: review.dislikes + 1, userAction: "dislike" };
+        }
+      })
+    );
   };
 
   const handleDelete = (id) => {
-    const userEmail = prompt(
-      "Enter the email used for this review to confirm deletion:"
-    );
     const review = reviews.find((r) => r.id === id);
 
     if (review && userEmail === review.email) {
-      setReviews(reviews.filter((r) => r.id !== id));
+      if (window.confirm("Are you sure you want to delete your review?")) {
+        setReviews(reviews.filter((r) => r.id !== id));
+      }
     } else {
       alert("You can only delete your own review.");
     }
@@ -113,12 +155,36 @@ function ReviewForm() {
               <p className={styles.reviewMeta}>
                 — <strong>{r.name}</strong> on {r.date}
               </p>
-              <button
-                className={styles.deleteButton}
-                onClick={() => handleDelete(r.id)}
-              >
-                🗑 Delete
-              </button>
+
+              <div className={styles.reactionRow}>
+                <button
+                  type="button"
+                  className={`${styles.likeButton} ${
+                    r.userAction === "like" ? styles.active : ""
+                  }`}
+                  onClick={() => handleLike(r.id)}
+                >
+                  👍 <span>{r.likes}</span>
+                </button>
+                <button
+                  type="button"
+                  className={`${styles.dislikeButton} ${
+                    r.userAction === "dislike" ? styles.active : ""
+                  }`}
+                  onClick={() => handleDislike(r.id)}
+                >
+                  👎 <span>{r.dislikes}</span>
+                </button>
+              </div>
+
+              {userEmail === r.email && (
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => handleDelete(r.id)}
+                >
+                  🗑 Delete
+                </button>
+              )}
             </div>
           ))
         )}
