@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import houses from "../../data/houseData";
-import styles from "./PropertyDetailPage.module.css";
+import styles from "./propertyDetailPage.module.css";
 
 function PropertyDetailPage() {
   const { id } = useParams();
