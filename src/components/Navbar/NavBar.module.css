@@ -3,7 +3,7 @@
 ========================= */
 .Navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, links right */
   align-items: center;
   background-color: #ffffff;
   padding: 1rem 2rem;
@@ -24,6 +24,7 @@
   font-weight: 700;
   color: #2e8b57;
   white-space: nowrap; /* Prevent logo text wrapping */
+  flex-shrink: 0; /* Keep logo fixed on left */
 }
 
 /* =========================
@@ -33,9 +34,11 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: flex-end; /* move links to right */
+  gap: 1.8rem;
   margin: 0;
   padding: 0;
+  flex-grow: 1;
 }
 
 .links a {
@@ -57,14 +60,14 @@
 
 /* Tablet screens */
 @media (max-width: 768px) {
-  .navbar {
+  .Navbar {
     flex-wrap: wrap;
     padding: 0.8rem 1rem;
   }
 
   .links {
     width: 100%;
-    justify-content: center;
+    justify-content: center; /* center links on smaller screens */
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.5rem;
@@ -77,7 +80,7 @@
 
 /* Extra small screens / mobile */
 @media (max-width: 480px) {
-  .navbar {
+  .Navbar {
     padding: 0.5rem 0.8rem;
   }
 
