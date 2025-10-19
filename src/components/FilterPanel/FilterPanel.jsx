@@ -25,7 +25,7 @@ function FilterPanel({ onFilter }) {
         Max Price:
         <input
           type="number"
-          placeholder="$"
+          placeholder="xaf"
           value={maxPrice}
           onChange={(e) => setMaxPrice(e.target.value)}
         />

@@ -42,7 +42,7 @@ function PropertyDetailPage() {
       <div className={styles.details}>
         <h1>{house.title}</h1>
         <p className={styles.location}>{house.location}</p>
-        <p className={styles.price}>${house.price.toLocaleString()}</p>
+        <p className={styles.price}>FCFA{house.price.toLocaleString()}</p>
         <p className={styles.description}>{house.description}</p>
       </div>
 

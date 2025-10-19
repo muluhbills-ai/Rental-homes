@@ -20,7 +20,7 @@ function ContactForm() {
     }
 
     // ✅ Replace this with your WhatsApp number (use international format, no "+" or spaces)
-    const phoneNumber = "237654964230"; // Example: Cameroon number
+    const phoneNumber = "237696643198"; // Example: Cameroon number
 
     // ✅ Create the prefilled WhatsApp message
     const message = `Hello, my name is ${form.name}. My email is ${form.email}. 
