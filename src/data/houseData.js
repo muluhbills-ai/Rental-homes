@@ -6,6 +6,17 @@
 
 const houses = [
   {
+    id: 100,
+    title: "TUTORIAL VIDEO",
+    location: "home page",
+    prce: "00",
+    images: [
+      "/assets/videos/tutorial-guid"
+    ],
+    description:
+    "A well defined video to help users easily navigate through our platform"
+  },
+  {
     id: 1,
     title: "Bright Future",
     location: "Down Quater",
@@ -14,7 +25,7 @@ const houses = [
       "/assets/images/bright-future-1.jpg",
       "/assets/images/bright-future-2.jpg",
       "/assets/images/bright-future-3.jpg",
-      "/assets/videos/bright-future.mp4"
+      "/assets/videos/bright-future-6.mp4"
     ],
     description:
       "A fully self enclosed room with an inner toilet and an available store right in the cite by the side of the Down Quater school street road.  It contains quality flowing water inside the toilets"
@@ -25,7 +36,7 @@ const houses = [
     location: "Down Quater",
     price: 260000,
     images: ["/assets/images/cite-labrad-4.jpg",
-      "/assets/videos/cite-labrad.mp4",
+      "/assets/videos/cite-labrad-7.mp4",
       "/assets/images/cite-labrad-5.jpg",
       "/assets/images/cite-labrad-1.jpg"
       
@@ -41,7 +52,7 @@ const houses = [
     images: [
       "/assets/images/early-bird-1.jpg",
       "/assets/images/early-bird-2.jpg",
-      "/assets/videos/early-bird.mp4"
+      "/assets/videos/early-bird-8.mp4"
     ],
     description: "Really close to the road. Room, toilet and kitchen at a really affordable price. Extra FCFA50000 is added for a pair"
   },
@@ -53,7 +64,7 @@ const houses = [
     images: ["/assets/images/Gamsi-Entrance-3.jpg",
       "/assets/images/Gamsi-Entrance-2.jpg",
       "/assets/images/Gamsi-Entrance-1.jpg",
-      "/assets/videos/Gamsi-Entrance.mp4"
+      "/assets/videos/Gamsi-Entrance-9.mp4"
     ],
     description:
       "A small quite self contained modern cite with constant flowing water and electricity  . Ideal for those who want comfort and style with privacy."
@@ -65,7 +76,7 @@ const houses = [
     price: 450000,
     images: ["/assets/images/No-Name-in.jpg",
       "/assets/images/No-Name-front.jpg",
-      "/assets/videos/no-name-room.mp4",
+      "/assets/videos/no-name-room-5.mp4",
       "/assets/videos/no-name-room-2.mp4"
 
     ],
@@ -81,7 +92,7 @@ const houses = [
       "/assets/images/standard-hostel-2.jpg",
       "/assets/images/standard-hostel-3.jpg",
       "/assets/images/standard-hostel-4.jpg",
-      "/assets/videos/standard-hostel.mp4"
+      "/assets/videos/standard-hostel-6.mp4"
     ],
     description:
       "Wake up to the road view. Modern interior, stady water and electricity flow"
