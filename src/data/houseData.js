@@ -5,19 +5,19 @@
  */
 
 const houses = [
-  {
-    id: 100,
-    title: "TUTORIAL VIDEO",
-    location: "home page",
-    prce: "00",
-    images: [
-      "/assets/videos/tutorial-guid"
+ {
+    id: 1,
+    title: "TUTORIAL VIDEO GUID",
+    location: "Home Page",
+    price: 1,
+    images: ["/assets/images/tutorial-video.png",
+      "/assets/videos/tutorial-guid.mp4"
     ],
     description:
-    "A well defined video to help users easily navigate through our platform"
+      "Wake up to ocean views every day in this beachfront condo. Modern interior, steps from the beach."
   },
   {
-    id: 1,
+    id: 2,
     title: "Bright Future",
     location: "Down Quater",
     price: 200000,
@@ -31,7 +31,7 @@ const houses = [
       "A fully self enclosed room with an inner toilet and an available store right in the cite by the side of the Down Quater school street road.  It contains quality flowing water inside the toilets"
   },
   {
-    id: 2,
+    id: 3,
     title: "Cite Labrad",
     location: "Down Quater",
     price: 260000,
@@ -45,7 +45,7 @@ const houses = [
       "Enjoy peace and nature in this cite labrad. Perfect for students who are ready to study, with breathtaking views. Found about 50m from the main road"
   },
  {
-    id: 3,
+    id: 4,
     title: "Early Bird",
     location: "Down Quater",
     price: 260000,
@@ -57,7 +57,7 @@ const houses = [
     description: "Really close to the road. Room, toilet and kitchen at a really affordable price. Extra FCFA50000 is added for a pair"
   },
   {
-    id: 4,
+    id: 5,
     title: "Gamsi Entrance",
     location: "Down Quater",
     price: 230000,
@@ -70,9 +70,9 @@ const houses = [
       "A small quite self contained modern cite with constant flowing water and electricity  . Ideal for those who want comfort and style with privacy."
   },
   {
-    id: 5,
+    id: 6,
     title: "No Name cite",
-    location: "Down Quater",
+    location: "Presbyterian Church, Down Quater ",
     price: 450000,
     images: ["/assets/images/No-Name-in.jpg",
       "/assets/images/No-Name-front.jpg",
@@ -84,9 +84,9 @@ const houses = [
       "This charming luxurious cite offers a cozy living space, modern kitchen and toilet, and is close to school campus. this rent is divided as follows(400000 for rent, 30000 for caution, 20000 for light and water). all this excludes a 10000 fee to be paid to the hpuse agent"
   },
   {
-    id: 6,
+    id: 7,
     title: "Standard Hostel",
-    location: "Mile 10",
+    location: "Caps Junction",
     price: 250000,
     images: ["/assets/images/standard-hostel-1.jpg",
       "/assets/images/standard-hostel-2.jpg",
