@@ -1,35 +1,169 @@
+/* =========================
+   ✅ Detail Page Container
+========================= */
 .container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.image {
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa; /* Subtle background */
   border-radius: 12px;
-  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.video {
+/* =========================
+   ✅ Main Media (Image or Video)
+========================= */
+.mainMedia {
   width: 100%;
-  margin-top: 1.5rem;
-  border-radius: 8px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #000;
 }
 
-.description {
-  margin-top: 1rem;
-  line-height: 1.6;
+/* =========================
+   ✅ Details Section
+========================= */
+.details {
+  margin-top: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.details h1 {
+  color: #2e8b57;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.location {
   color: #555;
+  font-size: 1rem;
 }
 
 .price {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #27ae60;
+  color: #2e8b57;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+
+.description {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* =========================
+   ✅ Gallery Section
+========================= */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.galleryItem {
+  width: calc(33.33% - 10px);
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  background: #000;
+}
+
+.galleryItem:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   ✅ WhatsApp Button Container
+========================= */
+.buttonContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.applyButton {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.applyButton:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(37, 211, 102, 0.4);
+}
+
+/* =========================
+   ✅ Tablet Responsiveness
+========================= */
+@media (max-width: 768px) {
+  .mainMedia {
+    height: 320px;
+  }
+
+  .galleryItem {
+    width: calc(50% - 10px);
+    height: 130px;
+  }
+
+  .applyButton {
+    width: 80%;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .details h1 {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================
+   ✅ Mobile Responsiveness
+========================= */
+@media (max-width: 480px) {
+  .mainMedia {
+    height: 220px;
+  }
+
+  .galleryItem {
+    width: 100%;
+    height: 120px;
+  }
+
+  .applyButton {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .details h1 {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
 }

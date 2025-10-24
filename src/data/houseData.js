@@ -166,7 +166,8 @@ const houses = [
     images: [ "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174460/opposite-catholic-church_emzatq.jpg",
       "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174460/opposite-catholic-church-3_csudtk.jpg",
       "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174459/opposite-catholic-church-2_hbmy7f.jpg",
-      "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174458/opposite-catholic-church-1_abhq1p.jpg"
+      "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174458/opposite-catholic-church-1_abhq1p.jpg",
+      "https://res.cloudinary.com/dy1zepecl/video/upload/v1761174469/VID-20251022-WA0041_evmwdi.mp4"
 
     ],
     description:
@@ -194,7 +195,8 @@ const houses = [
     images: [ "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174462/mzekas-plaza-1_mqzxdj.jpg",
       "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174465/mzekas-plaza-2_xegow2.jpg",
       "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174465/mzekas-plaza_dutluw.jpg",
-      "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174463/mzekas-plaza-3_xlypxt.jpg"
+      "https://res.cloudinary.com/dy1zepecl/image/upload/v1761174463/mzekas-plaza-3_xlypxt.jpg",
+      "https://res.cloudinary.com/dy1zepecl/video/upload/v1761174468/mzekas-plaza-4_syfhlq.mp4"
 
     ],
     description:
