@@ -7,7 +7,7 @@
   height: 75vh;
   background-image: 
     linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), /* Fade from right to left */
-    url("/assets/images/herosection-bg.jpg"); /* Desktop image path */
+    url("https://res.cloudinary.com/dy1zepecl/image/upload/v1761271823/hero-background_ivrcj4.jpg"); /* Desktop image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
