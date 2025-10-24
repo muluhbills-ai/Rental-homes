@@ -174,7 +174,7 @@ const houses = [
   },
   {
     id: 13,
-    title: "Cite La Grace",
+    title: "Cite La-Grace",
     location: "Catholic Church street, Down Quarter ",
     price: 230000,
     images: [
